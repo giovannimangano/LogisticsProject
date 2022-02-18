@@ -1,0 +1,41 @@
+data;
+
+param Capacity = 10;
+
+set Nodes := A B C D E F;
+
+param balance := A 5 B 0 C 0 D 0 E 0 F -5; 
+param receiving := A 12 B 0 C 0 D 0 E 0 F 7;
+param sending := A 7 B 0 C 0 D 0 E 0 F 12;
+
+
+set  Links := (A,B) (A,E) (B,C) (B,F) (C,D) (C,A) (D,E) (D,B) (E,C) (F,A) (F,D) (F,E);
+				 
+						
+param activationCost := A,B 1000
+						A,E 2000
+						B,C 1000
+						B,F 2000
+						C,D 1000
+						C,A 2000
+						D,E 1000
+						D,B 2000
+						E,C 1000
+						F,A 500
+						F,D 500
+						F,E 500 ; 
+						
+param variableCost :=   A,B 30
+						A,E 15
+						B,C 30
+						B,F 30
+						C,D 50
+						C,A 35
+						D,E 20
+						D,B 30
+						E,C 40
+						F,A 40
+						F,D 25
+						F,E 30	;
+						
+	
